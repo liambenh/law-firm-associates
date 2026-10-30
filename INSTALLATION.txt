@@ -1,0 +1,51 @@
+LAW FIRM & ASSOCIATES — VERSION MAC + IPHONE (PWA + CLOUD)
+==========================================================
+
+CE QUE CONTIENT CE PACK
+- Application responsive Mac/iPhone
+- Connexion / création de compte Supabase
+- Portefeuille clients : création, modification, suppression, recherche
+- Dossiers : clients liés, domaine, juridiction, statut, échéance, honoraires, partie adverse, résumé, preuves, stratégie
+- Calendrier des échéances
+- Finances indicatives
+- Export JSON
+- Synchronisation cloud Supabase
+- Installation PWA sur iPhone après publication HTTPS
+
+ÉTAPE 1 — CRÉER LE BACKEND SUPABASE (GRATUIT)
+1. Ouvrir https://supabase.com et créer un compte.
+2. Créer un projet (mot de passe DB à conserver en lieu sûr).
+3. Ouvrir SQL Editor > New query.
+4. Copier-coller tout le contenu de supabase_schema.sql puis cliquer RUN.
+5. Dans Project Settings > API, récupérer Project URL et la clé publique (publishable/anon).
+6. Ouvrir config.js et remplacer les deux valeurs COLLER_... par les vraies valeurs.
+   Important : utiliser uniquement la clé publique anon/publishable. JAMAIS service_role.
+
+ÉTAPE 2 — PUBLIER SUR VERCEL (GRATUIT POUR UN PROJET PERSONNEL)
+Vercel permet le déploiement à partir d'un dépôt Git.
+1. Créer un compte sur https://github.com et un dépôt privé.
+2. Ajouter les fichiers de ce dossier à la racine du dépôt.
+3. Créer un compte sur https://vercel.com, choisir Add New > Project.
+4. Importer le dépôt GitHub et déployer comme site statique (aucune commande de build; dossier de sortie ./).
+5. Vercel fournit une URL HTTPS.
+
+ÉTAPE 3 — INSTALLER SUR IPHONE
+1. Ouvrir l'URL Vercel dans Safari sur l'iPhone.
+2. Toucher Partager.
+3. Choisir Sur l'écran d'accueil > Ajouter.
+4. Ouvrir l'icône LAW FIRM. Se connecter avec le même compte que sur Mac.
+
+TEST INITIAL
+- Créer un compte avec un e-mail auquel tu as accès.
+- Selon les réglages Supabase, confirmer l'e-mail avant connexion.
+- Ajouter un client depuis le Mac, puis ouvrir l'application sur l'iPhone et vérifier qu'il apparaît.
+- Les modifications cloud nécessitent une connexion Internet.
+
+SÉCURITÉ / LIMITES
+- Ce projet est un prototype éducatif, pas un logiciel juridique professionnel certifié.
+- Ne pas y saisir de données personnelles réelles, pièces confidentielles, données de santé, informations pénales identifiantes ou secrets professionnels.
+- Les règles RLS limitent les lignes aux données du compte connecté, mais ne remplacent pas un audit de sécurité.
+- Les pièces jointes ne sont pas encore téléversées : les preuves sont actuellement des descriptions textuelles.
+- Les notifications push, pièces jointes sécurisées, journal d'audit et sauvegardes automatiques indépendantes restent à construire.
+- Le plan gratuit Supabase peut mettre en pause les projets inactifs; consultez les conditions et quotas à jour.
+- Garder le dépôt GitHub privé. Ne jamais publier de clé service_role ou mot de passe de base de données.

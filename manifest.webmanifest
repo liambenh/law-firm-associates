@@ -1,0 +1,9 @@
+{
+  "name": "LAW FIRM & ASSOCIATES",
+  "short_name": "LAW FIRM",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f4f5f7",
+  "theme_color": "#101d31",
+  "description": "Application de gestion juridique"
+}
