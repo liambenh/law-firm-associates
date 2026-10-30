@@ -117,8 +117,175 @@
         ]}
       ]
     }
+         ,{
+      id:104,
+      title:"THE MISSING HEIR",
+      domain:"Droit pénal · Disparition",
+      client:"Evelyn Hart",
+      court:"Los Angeles County Superior Court",
+      difficulty:"Intermédiaire",
+      fee:38000,
+      reputation:4,
+      brief:"Une héritière disparaît après une réunion familiale. Son frère est accusé d'avoir organisé son enlèvement pour contrôler une succession de 60 millions de dollars.",
+      phases:[
+        {name:"Le mandat",scene:"La police veut interroger ton client immédiatement. Il a reçu plusieurs messages anonymes avant la disparition.",evidence:["Message : Ne viens pas seul","Caméra montrant une voiture similaire à la sienne","Aucun témoin ne l'identifie formellement"],prompt:"Quelle est ta priorité ?",choices:[
+          ["Assister le client et vérifier les conditions de l'interrogatoire","Tu protèges ses droits et évites les déclarations précipitées.",{score:3,rep:2,fee:2000,heat:0}],
+          ["Lui conseiller de mentir sur ses déplacements","Un faux récit peut détruire sa défense.",{score:-4,rep:-4,fee:0,heat:3}],
+          ["Faire fuiter son innocence à la presse","Une communication non vérifiée peut nuire à l'enquête.",{score:-1,rep:-2,fee:0,heat:2}]
+        ]},
+        {name:"La piste numérique",scene:"Les messages proviennent d'un numéro prépayé. Une caméra de péage place le véhicule à 40 km du lieu supposé.",evidence:["Historique de péage horodaté","Téléphone partagé dans la famille","Métadonnées des messages incomplètes"],prompt:"Que demandes-tu ?",choices:[
+          ["Obtenir légalement les données et établir une chronologie","Tu testes les hypothèses avec des éléments vérifiables.",{score:3,rep:2,fee:3500,heat:0}],
+          ["Accéder au compte du frère sans autorisation","Tu risques une preuve irrégulière.",{score:-4,rep:-5,fee:0,heat:4}],
+          ["Ignorer les données contradictoires","Tu fragilises ton analyse.",{score:-2,rep:-2,fee:0,heat:1}]
+        ]},
+        {name:"L'audience",scene:"La victime est retrouvée. Elle affirme avoir quitté volontairement la ville, mais hésite à témoigner contre sa famille.",evidence:["Billet acheté avec son propre compte","Caméra de gare confirmant son départ","Aucun lien matériel direct avec le frère"],prompt:"Quelle position défends-tu ?",choices:[
+          ["Présenter les preuves et respecter le choix de la victime","Tu distingues les faits établis des suppositions.",{score:3,rep:3,fee:6500,heat:0}],
+          ["Faire pression sur la victime","Une pression peut être illégale et contre-productive.",{score:-5,rep:-5,fee:0,heat:4}],
+          ["Affirmer que toute l'affaire est inventée","Tu vas au-delà de ce que les pièces démontrent.",{score:-2,rep:-2,fee:0,heat:1}]
+        ]}
+      ]
+    },
+    {
+      id:105,
+      title:"THE SILENT WITNESS",
+      domain:"Droit pénal · Agression",
+      client:"Marcus Bell",
+      court:"Los Angeles County Superior Court",
+      difficulty:"Intermédiaire",
+      fee:32000,
+      reputation:3,
+      brief:"Un restaurateur est accusé d'une agression à la sortie de son établissement. Une vidéo partielle circule en ligne et un témoin change sa version.",
+      phases:[
+        {name:"La vidéo",scene:"La vidéo commence après le début de l'altercation. Ton client reconnaît avoir poussé la victime, mais conteste avoir porté le premier coup.",evidence:["Vidéo de 18 secondes","Rapport médical","Deux versions initiales contradictoires"],prompt:"Quelle démarche ?",choices:[
+          ["Obtenir la vidéo complète et préserver l'original","Le contexte et l'authenticité sont essentiels.",{score:3,rep:2,fee:2500,heat:0}],
+          ["Publier la vidéo coupée","Une présentation trompeuse peut se retourner contre lui.",{score:-4,rep:-4,fee:0,heat:3}],
+          ["Supprimer les publications du client","Cela peut faire disparaître des éléments utiles.",{score:-2,rep:-2,fee:0,heat:2}]
+        ]},
+        {name:"Le témoin",scene:"Le témoin principal affirme maintenant avoir vu ton client frapper le premier. Sa première déclaration ne le disait pas.",evidence:["Enregistrement de l'appel aux secours","Déclaration écrite 48 heures plus tard","Le témoin connaît la victime"],prompt:"Comment l'interroger ?",choices:[
+          ["Comparer précisément les deux récits","Tu fais ressortir les contradictions sans intimider.",{score:3,rep:2,fee:3000,heat:0}],
+          ["L'accuser de mentir sans poser de questions","Tu perds l'occasion d'établir les contradictions.",{score:-2,rep:-2,fee:0,heat:1}],
+          ["Lui proposer un avantage pour changer son récit","C'est une conduite gravement irrégulière.",{score:-5,rep:-6,fee:0,heat:5}]
+        ]},
+        {name:"La résolution",scene:"Le procureur propose une infraction réduite et une peine aménageable. Ton client veut absolument aller au procès.",evidence:["Vidéo incomplète","Blessure médicalement constatée","Témoin contestable"],prompt:"Que lui recommandes-tu ?",choices:[
+          ["Présenter les risques comparés et lui laisser la décision","Le client décide après un conseil complet.",{score:3,rep:3,fee:6000,heat:0}],
+          ["Promettre une relaxe certaine","Tu ne peux pas garantir un verdict.",{score:-3,rep:-3,fee:0,heat:2}],
+          ["Accepter à sa place","Le choix lui appartient.",{score:-5,rep:-5,fee:0,heat:3}]
+        ]}
+      ]
+    },
+    {
+      id:106,
+      title:"THE INSIDER",
+      domain:"Droit des affaires · Délit d'initié",
+      client:"Apex Capital",
+      court:"U.S. District Court · California",
+      difficulty:"Difficile",
+      fee:72000,
+      reputation:7,
+      brief:"Un gestionnaire de fonds est soupçonné d'avoir négocié des titres avant une annonce confidentielle. Les autorités examinent ses appels et ses ordres de bourse.",
+      phases:[
+        {name:"L'alerte",scene:"Le client affirme que ses opérations reposaient sur une analyse publique. Un analyste lui a pourtant envoyé un fichier confidentiel.",evidence:["Courriel avec pièce jointe","Ordres passés deux heures avant l'annonce","Note de recherche datée de la veille"],prompt:"Que fais-tu ?",choices:[
+          ["Préserver les communications et reconstituer la chronologie","Tu distingues les sources publiques et confidentielles.",{score:3,rep:2,fee:3500,heat:0}],
+          ["Effacer le fichier reçu","La destruction aggrave considérablement le risque.",{score:-5,rep:-6,fee:0,heat:5}],
+          ["Contacter l'analyste pour harmoniser vos versions","Tu risques de compromettre les témoignages.",{score:-4,rep:-4,fee:0,heat:4}]
+        ]},
+        {name:"L'enquête interne",scene:"Les logs montrent que trois employés ont ouvert le fichier. Le client veut identifier un bouc émissaire.",evidence:["Journaux d'accès","Politique de conformité","Ordres de trading de trois comptes"],prompt:"Quelle méthode ?",choices:[
+          ["Mandater une enquête indépendante","Tu évites les conclusions prématurées.",{score:3,rep:3,fee:5000,heat:0}],
+          ["Désigner le junior sans l'entendre","Tu sacrifies l'équité et la fiabilité de l'enquête.",{score:-3,rep:-3,fee:0,heat:2}],
+          ["Demander la suppression des messages","Tu risques une destruction de preuves.",{score:-5,rep:-6,fee:0,heat:5}]
+        ]},
+        {name:"La réponse",scene:"L'enquête confirme un accès au fichier avant les opérations, mais ne prouve pas qui a transmis l'information.",evidence:["Accès confirmé","Source de la fuite inconnue","Gain financier de 1,2 million de dollars"],prompt:"Quelle stratégie ?",choices:[
+          ["Évaluer la coopération et les risques réglementaires","Tu présentes des options réalistes au conseil.",{score:3,rep:3,fee:9000,heat:0}],
+          ["Nier tout accès malgré les logs","Une affirmation contredite par les pièces détruit la crédibilité.",{score:-4,rep:-5,fee:0,heat:3}],
+          ["Improviser un remboursement sans conseil","Une initiative improvisée ne règle pas les obligations légales.",{score:-2,rep:-2,fee:0,heat:1}]
+        ]}
+      ]
+    }
+         ,{
+      id:107,
+      title:"THE BROKEN DEAL",
+      domain:"Droit des affaires · Rupture contractuelle",
+      client:"Westbridge Studios",
+      court:"California Superior Court",
+      difficulty:"Facile",
+      fee:26000,
+      reputation:2,
+      brief:"Un studio accuse un distributeur d'avoir rompu un contrat exclusif avant la sortie d'un film. Les pertes annoncées dépassent 4 millions de dollars.",
+      phases:[
+        {name:"Le contrat",scene:"Le contrat prévoit une exclusivité, mais une clause autorise certaines distributions numériques.",evidence:["Contrat signé","Annexe numérique","Échanges de négociation"],prompt:"Quelle analyse ?",choices:[
+          ["Lire le contrat, ses annexes et les échanges","Tu interprètes l'accord dans son ensemble.",{score:3,rep:2,fee:1500,heat:0}],
+          ["Citer uniquement la clause d'exclusivité","Tu ignores une exception potentiellement décisive.",{score:-2,rep:-2,fee:0,heat:1}],
+          ["Menacer immédiatement d'une action pénale","Le différend est d'abord contractuel.",{score:-2,rep:-2,fee:0,heat:2}]
+        ]},
+        {name:"Le préjudice",scene:"Le distributeur affirme que les ventes auraient été faibles. Les projections du studio sont optimistes.",evidence:["Prévisions internes","Ventes comparables","Coûts marketing"],prompt:"Comment chiffrer ?",choices:[
+          ["Faire établir une expertise avec plusieurs scénarios","Tu relies les demandes à des données vérifiables.",{score:3,rep:2,fee:3000,heat:0}],
+          ["Réclamer 20 millions au hasard","Une demande non étayée affaiblit le dossier.",{score:-2,rep:-2,fee:0,heat:1}],
+          ["Cacher les prévisions défavorables","Tu compromets la crédibilité du client.",{score:-4,rep:-4,fee:0,heat:3}]
+        ]},
+        {name:"L'accord",scene:"Le distributeur propose 2,5 millions et une nouvelle fenêtre de diffusion.",evidence:["Offre écrite","Expertise provisoire","Coût estimé du procès : 900 000 $"],prompt:"Que conseilles-tu ?",choices:[
+          ["Comparer valeur nette, délai, garanties et risques","Tu aides le client à décider sur une base économique.",{score:3,rep:3,fee:5500,heat:0}],
+          ["Refuser par principe","Tu négliges une solution potentiellement avantageuse.",{score:-1,rep:-1,fee:0,heat:1}],
+          ["Signer sans autorisation du studio","Tu dépasses ton mandat.",{score:-4,rep:-5,fee:0,heat:3}]
+        ]}
+      ]
+    },
+    {
+      id:108,
+      title:"THE FALSE ALIBI",
+      domain:"Droit pénal · Cambriolage",
+      client:"Noah Price",
+      court:"Los Angeles County Superior Court",
+      difficulty:"Intermédiaire",
+      fee:35000,
+      reputation:4,
+      brief:"Un étudiant est accusé d'un cambriolage. Son alibi repose sur un reçu de restaurant dont l'heure semble avoir été modifiée.",
+      phases:[
+        {name:"Le reçu",scene:"Le client affirme être au restaurant à l'heure du cambriolage. Le reçu numérique comporte une anomalie.",evidence:["Reçu PDF","Paiement bancaire","Caméra du restaurant"],prompt:"Que vérifies-tu ?",choices:[
+          ["Demander les données originales au commerçant","Tu vérifies la source plutôt que la copie.",{score:3,rep:2,fee:2000,heat:0}],
+          ["Modifier le PDF pour corriger l'heure","Tu fabriques une preuve.",{score:-5,rep:-7,fee:0,heat:5}],
+          ["Écarter l'alibi sans enquête","Tu abandonnes une piste utile.",{score:-1,rep:-1,fee:0,heat:1}]
+        ]},
+        {name:"La chronologie",scene:"La banque confirme un paiement à proximité, mais 25 minutes avant le cambriolage.",evidence:["Transaction horodatée","Trajet estimé de 18 minutes","Caméra avec horloge décalée"],prompt:"Quelle piste ?",choices:[
+          ["Faire vérifier les horloges et les temps de trajet","Tu testes l'alibi avec des données fiables.",{score:3,rep:2,fee:3000,heat:0}],
+          ["Prétendre que le paiement prouve toute la soirée","La preuve ne démontre pas plus que son contenu.",{score:-2,rep:-2,fee:0,heat:1}],
+          ["Demander au client de contacter le témoin","Tu risques d'influencer son récit.",{score:-3,rep:-3,fee:0,heat:2}]
+        ]},
+        {name:"Le procès",scene:"Une empreinte est retrouvée sur une fenêtre, mais le lieu était accessible au public.",evidence:["Empreinte partielle","Accès public au bâtiment","Alibi partiellement corroboré"],prompt:"Quelle défense ?",choices:[
+          ["Contester la valeur de l'empreinte et rappeler la charge de la preuve","Tu relies les limites techniques au contexte.",{score:3,rep:3,fee:6500,heat:0}],
+          ["Inventer un second témoin","Tu crées une fausse preuve.",{score:-5,rep:-6,fee:0,heat:4}],
+          ["Ignorer l'empreinte","Tu laisses une preuve importante sans réponse.",{score:-2,rep:-2,fee:0,heat:1}]
+        ]}
+      ]
+    },
+    {
+      id:109,
+      title:"THE DATA LEAK",
+      domain:"Droit des affaires · Données personnelles",
+      client:"Helix Health",
+      court:"California Superior Court",
+      difficulty:"Difficile",
+      fee:68000,
+      reputation:6,
+      brief:"Une plateforme de santé découvre qu'un prestataire a exposé des dossiers utilisateurs. Le régulateur demande des explications sous 48 heures.",
+      phases:[
+        {name:"La fuite",scene:"Des données sensibles ont été accessibles depuis un lien mal configuré. Le prestataire affirme qu'aucun téléchargement n'a eu lieu.",evidence:["Logs d'accès incomplets","Contrat de sous-traitance","Capture d'écran publiée en ligne"],prompt:"Quelle urgence ?",choices:[
+          ["Sécuriser l'accès, préserver les logs et lancer une analyse","Tu limites le risque et protèges les preuves.",{score:3,rep:3,fee:4000,heat:0}],
+          ["Effacer les logs pour protéger la réputation","Tu détruis des éléments essentiels.",{score:-5,rep:-6,fee:0,heat:5}],
+          ["Accuser publiquement le prestataire","Tu communiques avant d'avoir établi les faits.",{score:-2,rep:-3,fee:0,heat:2}]
+        ]},
+        {name:"Les notifications",scene:"L'équipe ne sait pas encore combien de personnes sont concernées. Le délai légal dépend de plusieurs facteurs.",evidence:["8 000 personnes potentiellement touchées","Données médicales concernées","Analyse forensique en cours"],prompt:"Comment répondre ?",choices:[
+          ["Vérifier les obligations applicables et préparer une notification exacte","Tu évites retard et information trompeuse.",{score:3,rep:2,fee:4500,heat:0}],
+          ["Annoncer zéro victime sans preuve","Tu prends un risque de déclaration inexacte.",{score:-4,rep:-4,fee:0,heat:3}],
+          ["Attendre sans vérifier les délais","Tu risques de manquer une échéance.",{score:-3,rep:-3,fee:0,heat:2}]
+        ]},
+        {name:"Le recours",scene:"Un groupe d'utilisateurs envisage une action collective. Le prestataire invoque une clause limitative de responsabilité.",evidence:["Contrat client","Contrat prestataire","Rapport d'incident préliminaire"],prompt:"Quelle stratégie ?",choices:[
+          ["Analyser responsabilités, clauses et mesures de réparation","Tu construis une réponse documentée.",{score:3,rep:3,fee:8500,heat:0}],
+          ["Faire signer des renonciations sous pression","Tu aggraves le risque juridique.",{score:-4,rep:-5,fee:0,heat:4}],
+          ["Poursuivre sans chiffrer le préjudice","Tu avances sans base suffisante.",{score:-1,rep:-1,fee:0,heat:1}]
+        ]}
+      ]
+    }
   ];
-
   const key = "lf_simulation_v1";
   let state;
   try { state = JSON.parse(localStorage.getItem(key)) || null; } catch {}
